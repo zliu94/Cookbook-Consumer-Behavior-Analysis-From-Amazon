@@ -1,1 +1,19 @@
 # Cookbook-Consumer-Behavior-Analysis-From-Amazon
+## BACKGROUND
+What key elements made up those best sellers in the book industry is one of the most concerned topics for publishers. For long, customer reviews has been a doorway to analyzing the consumer behaviour and buying patterns for product introduction and improvement. In this web mining project, we will analyze different aspects of the best selling cookbooks on Amazon.com to obtain consumer preferences and patterns, and help the publishers in their book production lifecycles.
+
+## INTRODUCTION
+This project aims to analyze the content and the reviews of the best selling cookbooks on Amazon and derive valuable consumer behavior patterns for the publishing industry. 
+We will collect the data through web scraping on Amazoon.com. By applying text mining techniques, we are able to clean the raw data and extract useful features from the original unstructured data. After data cleaning, we are planning to get a general understanding of the documents by Exploratory Data Analysis and Clustering Analysis on the cookbooks’  metadata. 
+After that, we want to do a Sentiment Analysis on the book reviews according to the clustering results, to extract positive and negative features that may affect the consumer behaviors for different clusters. For example, under each type, we may randomly select 5 books and collect all the reviews of these 5 books to do sentiment analysis to divide all reviews in 3 groups: negative, neutral and positive. Based on the 3 groups we can use tf-idf model to see the most popular words and conclude the positive and negative features of different types of books. From here, we can provide meaningful guidelines for the publishers and writers, to learn from positive features and avoid negative features. 
+Furthermore, we will do a simple multifactor analysis to predict the ranking of the cookbooks by summarizing all the features we retrieved, either from the book’s metadata, or from text mining. If possible, we can use deep learning models to forecast the rankings based on the text features we extracted.
+
+## DATA SOURCE
+Our plan is to scrape the top 100 cookbooks and their reviews from Amazon.com under the category of ‘Cookbooks, Food & Wine’ (link) which contains over 40,00 products. The rational  to choose 100 books is because the point of the research project is to derive business on bestselling books rather than those books that are not a hit.  The content we are going to scrape includes but is not limited to: 
+* metadata on the books, e.g. title, index, product details, rankings, editorial reviews; 
+* data of the customer reviews, e.g. ratings and texts. 
+We expect the product reviews to reflect some important characteristics of the book, as well as to reveal the consumer preferences and behaviors to some extent. For example, under each type of books, we can compare reviews of highest rank book and lowest rank book to see the difference between the two books.
+
+
+## LITERATURE REVIEWS
+A lot of research has been done in analyzing amazon product reviews and ratings. After reviewing a few literatures, we summarized some key takeaways on this research topic. Feature extraction could be one of the difficulties to crack, as Sohial, Siddiqui & Ali (2016) implied that negative words may be used in favour of a product. They introduced human intelligence to categorize the features, which could be a reference in the working process of our project. Another difficulty could come from the Sentiment Analysis, as we want to extract positive and negative features of the books by analyzing the sentiment of the reviews. Currently, most research on Sentiment Analysis focus on classification, for example, the sentiment analysis done by Srujan, et. al. (2018) classified the amazon book reviews into 7 categories of emotions. We may need to do more research on the literature to find a solution to the task.
